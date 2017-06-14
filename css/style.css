@@ -11,9 +11,7 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: 100;
 	margin: 0;
 }
-img {
-	max-width: 200px;
-}
+
 
 /*Header Navigation*/
 header .navbar {
@@ -131,6 +129,124 @@ and (max-width: 768px) {
 	 padding: 0 20%;
  }
 }
+
+/*Page --staff */
+
+#staff {
+	background-color: #E4D29D;
+	background-image: linear-gradient(to bottom, #E4D29D,#CDAE50);
+}
+
+.doctor {
+	margin: 10px 0;
+}
+
+.doctor h3 {
+	font-weight: 600;
+	font-size: 1.2em;
+	color: #6F4E36;
+	padding-bottom: 5px;
+}
+
+.doctor p {
+	font-size: .8em;
+}
+
+.doctor img {
+	width: 100%;
+}
+
+/*Page  Testimonials*/
+
+#testimonials {
+	padding: 0;
+}
+
+#testimonials h2 {
+	display: none;
+}
+
+#testimonials blockquote {
+	background-color: rgba(255,255,255, .6);
+	margin: 0;
+	padding: 0;
+	border-left: none;
+	min-height: 500px;
+	position: relative;
+}
+
+#testimonials blockquote .quote {
+	background-color: rgba(255,255,255, .6);
+	bottom: 0;
+	width: 75%;
+	font-weight: 400;
+	padding: 20px 5%;
+	position: absolute;
+	border-radius: 0 50px 0 0; 
+
+}
+
+#testimonials blockquote .quote:hover {
+	background-color: rgba(239,240,196, .9);
+}
+
+#testimonials #janeh {
+	background: url(../images/testimonial-janeh.jpg) no-repeat center;
+	background-size: cover;
+}
+
+#testimonials #johnb {
+	background: url(../images/testimonial-johnb.jpg) no-repeat center;
+	background-size: cover;
+}
+
+#testimonials #mcphersons {
+	background: url(../images/testimonial-mcphersons.jpg) no-repeat center;
+	background-size: cover;
+}
+
+#testimonials #lorraines {
+	background: url(../images/testimonial-lorraines.jpg) no-repeat center;
+	background-size: cover;
+}
+
+#testimonials .quote {
+	font-size: 1.2em;
+	line-height: 110%;
+	font-weight: 400;
+}
+
+#testimonials .quote .more, #testimonials .quote .customer {
+	opacity: 0;
+	font-size: 0;
+	line-height: 0;
+	padding-top: 10px;
+}
+
+#testimonials .quote:hover .more {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
+	display: block;
+	opacity: 1;
+	font-size: .8em;
+	line-height: 120%;
+}
+
+#testimonials .quote:hover .customer {
+	text-align: center;
+	display: block;
+	font-size: .8em;
+
+}
+
+#testimonials .quote .intro:after {
+ content: '...';
+}
+
+#testimonials .quote:hover .intro:after {
+ content: '';
+}
+
 
 /*Page */
 .page {
