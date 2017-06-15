@@ -2,6 +2,7 @@ $(function(){
 "use strict";
 //Activate Scrollspy
 var topoffset = 50; //menu height
+var slideqty = $('#featured .item').length;
 
 $('body').scrollspy({
   target: 'header .navbar',
@@ -45,6 +46,11 @@ $('.navbar-fixed-top').on('activate.bs.scrollspy', function() {
     } //click function
   }); //smooth scrollin
 
+//adding carousel nav buttons
+for(var i=0;i<slideqty;i++){
+  var insertText = '<li data-target="#featured" data-slide-to="'+ i + '"></li>';
+  $('#featured ol').append(insertText);
+}
 
 $('.carousel').carousel({
   interval: false
