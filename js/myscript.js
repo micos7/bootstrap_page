@@ -3,10 +3,26 @@ $(function(){
 //Activate Scrollspy
 var topoffset = 50; //menu height
 var slideqty = $('#featured .item').length;
+var wheight = $(window).height();
+
+$('.fullheight').css('height',wheight);
 
 $('body').scrollspy({
   target: 'header .navbar',
   offset: topoffset
+})
+
+//replace img inside carousel with background imgs
+$('#featured .item img').each(function(){
+  var imgSrc= $(this).attr('src');
+  $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+  $(this).remove();
+})
+
+//adjust fullheight on window resize
+$(window).resize(function() {
+  wheight = $(window).height();
+  $('.fullheight').css('height',wheight);
 })
 
 
