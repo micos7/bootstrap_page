@@ -4,6 +4,9 @@ $(function(){
 var topoffset = 50; //menu height
 var slideqty = $('#featured .item').length;
 var wheight = $(window).height();
+var randSlide = Math.floor(Math.random()* slideqty);
+
+$('#featured .item').eq(randSlide).addClass('active');
 
 $('.fullheight').css('height',wheight);
 
@@ -64,12 +67,16 @@ $('.navbar-fixed-top').on('activate.bs.scrollspy', function() {
 
 //adding carousel nav buttons
 for(var i=0;i<slideqty;i++){
-  var insertText = '<li data-target="#featured" data-slide-to="'+ i + '"></li>';
+  var insertText = '<li data-target="#featured" data-slide-to="'+ i + '"';
+  if(i == randSlide){
+    insertText += ' class="active" ';
+  }
+  insertText += '></li>';
   $('#featured ol').append(insertText);
 }
 
 $('.carousel').carousel({
-  interval: false
+  pause: false
 });
 
 });
